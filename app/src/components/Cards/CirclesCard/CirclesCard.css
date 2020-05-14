@@ -1,0 +1,39 @@
+.circle-description-enter {
+  opacity: 0;
+}
+
+.circle-description-enter-active {
+  opacity: 1;
+  transition: opacity 500ms linear;
+}
+
+.circle-description-exit {
+  opacity: 1;
+}
+
+.circle-description-exit-active {
+  opacity: 0;
+  transition: all 1s ease-in;
+}
+
+.circle-description-done {
+  opacity: 0;
+}
+
+.circle-description-appear {
+  opacity: 0;
+}
+
+.circle-description-appear-active {
+  opacity: 1;
+  transition: 1 500ms linear;
+}
+
+.tooltip {
+  min-width: 80px;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  text-align: center;
+  z-index: 999;
+}

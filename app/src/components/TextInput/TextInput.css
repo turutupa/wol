@@ -1,0 +1,4 @@
+input[type="password"] {
+  -webkit-text-security: disc;
+  font-family: caption;
+}

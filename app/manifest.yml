@@ -1,0 +1,9 @@
+---
+applications:
+    - name: workingoutloud
+      host: wol
+      path: build
+      buildpack: staticfile_buildpack
+      memory: 64M
+      
+      

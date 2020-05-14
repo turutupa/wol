@@ -1,0 +1,21 @@
+.react-calendar {
+  padding: 5px;
+  border: 0px !important;
+  border-radius: 5px;
+  height: fit-content;
+  border: none;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.react-calendar__tile--now {
+  border-radius: 5px;
+  background: #f3f3;
+}
+
+.react-calendar__tile--active {
+  border-radius: 5px;
+}
+
+.react-calendar__tile:hover {
+  border-radius: 5px;
+}

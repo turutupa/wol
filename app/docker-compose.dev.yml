@@ -1,0 +1,14 @@
+version: "3"
+services:
+  app:
+    stdin_open: true
+    container_name: wol-frontend
+    restart: unless-stopped
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    volumes:
+      - ".:/app"
+      - "/app/node_modules"
+    ports:
+      - "80:3000"

@@ -1,0 +1,401 @@
+$customBackCol: #8855DD
+$pink: #F58
+$c1: #a6aad1
+$c2: #5f5f80
+$break-med: 900px
+$break-small: 700px
+$cardCol: #1D1D2B 
+
+    
+*
+  font-family: rounded, sans-serif
+  
+html
+  background: #223
+  
+
+    
+.plx-card
+  transition: all 600ms ease
+  max-width: 1100px
+  display: flex
+  position: relative
+  overflow: hidden
+  margin: 30px 0 
+  filter: drop-shadow(0 2px 1rem #112)
+  border-radius: 4px
+  &.bronze
+    overflow: visible 
+    @media screen and (max-width: 1000px) and (min-width: $break-small)
+      left: 120px
+  @media screen and (min-width: $break-small) 
+    &.gold
+      height: 280px    
+    &.silver
+      height: 150px
+      border-radius: 2px
+    &.bronze
+      height: 134px
+      width: 480px
+      display: inline-flex
+      margin: 30px 30px
+      
+
+  @media screen and (max-width: $break-small)
+    height: auto
+    //min-height: 350px
+    width: auto
+    flex-direction: column
+    border-radius: 2px
+    margin: 25px 15px
+    &.silver
+      height: 270px
+      .flags
+        margin: 0 10px
+      .links 
+        text-align: right
+        justify-content: flex-end        
+        a
+          font-size: 24px
+          height: 30px
+          margin: -8px 5px 5px 5px
+          padding: 6px 0px 1px 0
+          border-radius: 2px
+          color: #FFFA
+          background: $customBackCol
+          &:hover
+            color: #FFF
+    
+
+.pxc-avatar
+  transition: all 600ms ease
+  display: flex
+  flex-direction: column
+  height: auto
+  width: 150px
+  justify-content: space-around
+  .bronze &
+    img      
+      width: 90px
+      height: 90px
+      top: -15px
+      left: -20px
+      position: absolute
+
+  @media screen and (max-width: $break-small)
+    width: 100%
+    height: 100px  
+    justify-content: space-around
+    align-items: center
+    .silver &
+      img
+        position: absolute
+        width: 100px
+        height: 100px
+        top: -80px
+        right: 20px
+    .bronze &
+      height: 150px
+      img
+        top: -105px
+        left: -10px 
+        height: 80px
+        width: 80px
+        
+
+  img
+      transition: all 600ms ease
+      width: 150px
+      height: 150px
+      border-radius: 100%
+      box-shadow: 0 1px 1rem rgba(10,10,25,.5)
+      position: relative
+      z-index: 1
+      @media screen and (max-width: $break-med)
+        width: 125px
+        height: 125px
+      @media screen and (max-width: $break-small)
+        margin-top: 100px
+
+
+
+.pxc-bg
+  transition: all 600ms ease
+  border-radius: 2px
+  height: 100%
+  width: calc(100% - 75px)
+  position: absolute
+  z-index: 0
+  pointer-events: none
+  left: 75px    
+  background-size: cover
+  background-position: right
+  background-color: #2b2b95
+  .silver &
+    height: 100%
+    background-size: contain
+    @media screen and (max-width: $break-small)
+      height: 60%
+      top: 30px
+      
+
+  .bronze &
+    background-size: cover
+    position: absolute
+    top: 0
+    left: 0 
+    width: 480px
+    height: 100%
+    max-height: 80px
+    border-radius: 0
+    background-position: 0 -10px
+    
+  @media screen and (max-width: $break-med)
+    left: 50px     
+  @media screen and (max-width: $break-small)
+    .silver & 
+      background-position: top right
+    left: 0
+    top: 0
+    height: 200px
+    width: 100%
+    border-radius: 0        
+
+.pxc-subcard
+  transition: all 600ms ease
+  border-radius: 3px
+  background: $cardCol
+  width: 650px
+  margin: 25px 200px 25px -25px
+  z-index: 0
+  padding: 15px 25px 15px 40px
+  position: relative
+  display: flex
+  flex-direction: column
+  box-shadow: 0 1px 1rem rgba(10,10,25,.3)
+  .gold &
+  .silver &
+    @media screen and (min-width: $break-small) 
+      margin: 0 0 0 -75px
+      padding: 15px 25px 15px 90px
+    @media screen and (max-width: $break-small)
+      padding: 15px
+      margin: 5px 
+      flex: 0 1 auto
+      
+  .bronze &
+    position: absolute
+    bottom: 0
+    margin: 0 
+    padding: 15px 10px 10px 70px
+    width: 400px
+    height: auto
+    max-height: 80px
+    border-radius: 0
+
+
+  @media screen and (max-width: $break-med)
+    margin-right: 120px
+    margin-left: -32px
+  @media screen and (max-width: $break-small)
+    margin: 25px 15px 30px 15px
+    padding: 60px 25px 20px
+    width: auto
+    height: auto
+    flex: 1 0 auto
+    .silver &
+      padding-top: 20px
+
+.pxc-stopper
+  transition: all 600ms ease
+  height: 100%
+  width: calc(60%)
+  background: #FFF8
+  display: block
+  position: absolute
+  z-index: 0
+  left: 75px  
+  .bronze &
+    display: none
+  @media screen and (max-width: $break-med)
+    left: 50px  
+  @media screen and (max-width: $break-small)
+    left: 0
+    width: 100%
+    top: 200px
+    height: calc(100% - 200px)
+    background: white
+    border-radius: 0
+    .silver &
+      height: 50%
+      bottom: 0
+      top: initial
+
+.pxc-tags
+  position: absolute
+  bottom: -15px
+  right: 10px
+  height: 32px
+  overflow: hidden
+  text-align: right
+  .silver &,
+  .bronze &
+    display: none
+    
+  div
+    color: white
+    display: inline-block
+    background: $customBackCol
+    border-radius: 12px
+    padding: 2px 10px
+    line-height: 1.7
+    margin: 4px 4px
+    font-size: 12px
+    height: 20px
+  @media screen and (max-width: $break-small)
+    height: 64px      
+    text-align: center
+    position: relative
+    width: 100%
+    bottom: 0
+    left: 0
+    margin-bottom: 10px
+    div
+      color: $customBackCol
+      border: solid 1px $customBackCol
+      background: transparent
+
+
+.pxc-title
+  font-size: 24px
+  margin-bottom: 4px
+  color: white
+  width: calc(100% - 50px)
+  white-space: nowrap
+  text-overflow: ellipsis
+  overflow: hidden
+  flex: 0 0 auto
+  .silver &
+  .bronze &
+    font-size: 18px
+  @media screen and (max-width: $break-small)
+    font-size: 16px
+    white-space: initial
+    overflow: initial
+    text-overflow: initial
+
+.pxc-sub
+  font-size: 14px
+  margin: 2px 0 8px 0
+  //max-height: 50px
+  flex: 1 1 auto
+  overflow: hidden 
+  -webkit-mask-image: linear-gradient(rgba(0, 0, 0, 1.0) 80%,transparent 100%)
+  color: $c1    
+  .silver &
+    overflow: visible
+  @media screen and (max-width: $break-small)
+    font-size: 13px
+
+.pxc-feats
+  font-size: 13px
+  color: $c2
+  flex: 1 1 auto
+  //max-height: 50px
+  padding-bottom: 5px
+  margin-bottom: 5px
+  line-height: 1.3
+  overflow: hidden
+  -webkit-mask-image: linear-gradient(rgba(0, 0, 0, 1.0) 50%,transparent 100%)
+  .silver &,
+  .bronze &
+    display: none
+  
+  @media screen and (max-width: $break-small)
+    font-size: 12px
+    margin-top: 10px
+    text-align: center
+
+  span:not(:first-child):before
+    content: " • "
+    margin: 3px
+
+.bottom-row
+  flex: 0 1 auto
+  margin-top: 10px
+  display: flex    
+  justify-items: space-around
+  align-items: center  
+  @media screen and (max-width: $break-small)
+      border-top: solid 1px rgba(255,255,255,.05)
+      padding-top: 5px
+
+  .pxc-info
+    display: flex
+    align-items: center
+    justify-content: space-between
+    .bronze &
+      display: none
+    @media screen and (max-width: $break-small)
+      position: absolute
+      bottom: -28px
+      left: -10px
+      justify-content: space-between
+      width: 100%
+      .region
+        color: #112
+        font-size: 13px
+        text-transform: uppercase
+  .links
+    display: flex
+    align-content: flex-end
+    flex: 1 0 auto
+    justify-content: flex-end     
+    a
+      .bronze &
+        display: none
+      color: #99D
+      font-size: 28px
+      text-align: center
+      width: 48px
+      height: 48px        
+      display: inline-block
+      margin: 0 10px
+      cursor: pointer
+      &:hover
+        color: #EEF
+
+    @media screen and (max-width: $break-small)
+      justify-content: center
+      margin-top: 10px
+      margin-bottom: -10px
+      a
+        color: $c1
+        
+
+
+  .flags
+    overflow: hidden
+    height: 23px
+    span
+      margin: 2px 6px
+      background: white
+      border-radius: 3px
+      width: 24px
+      height: 16px
+      display: inline-block
+
+  .region
+    color: white
+    margin-left: 8px
+    //background: red
+
+.bronze .discordLink
+  display: flex !important
+  position: absolute
+  left: -5px
+  bottom: 5px
+  justify-content: space-around
+  align-items: center
+  
+
